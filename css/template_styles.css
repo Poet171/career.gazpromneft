@@ -1,0 +1,703 @@
+@import url(fonts/fonts.css);
+
+/**
+ * Модальное окно
+ */
+.modal {}
+.modal .modal-dialog {
+    max-width: 680px;
+}
+.modal .modal-content {}
+.modal .modal-content .modal-header {
+    border-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .modal .modal-content .modal-header {
+        padding: 4rem 5rem 0 5rem;
+    }
+    .modal .modal-content .modal-body {
+        padding: 0 5rem 5rem 5rem;
+    }
+}
+
+/**
+ * Класс контейнера для input[type=file] с лейблом
+ */
+.file-control {}
+.file-control label {
+    display: inline-block;
+}
+.file-control input[type=file] {
+    display: none;
+}
+
+/**
+ * Проблема с порядком обявления файла, по этому добавлен костыль .btn перед расширяющим классом .btn-second.
+ */
+.btn.btn-second {
+    background-color: rgba(0, 66, 105, 0.07);
+    border-color: rgba(0, 66, 105, 0.20);
+    color: #00395C;
+}
+.btn.btn-second:hover {
+    background-color: rgba(0, 66, 105, 0.15);
+    border-color: rgba(0, 66, 105, 0.20);
+    color: #00395C;
+}
+.btn.btn-second:not(:disabled):not(.disabled):active,
+.btn.btn-second:not(:disabled):not(.disabled).active,
+.show > .btn.btn-second.dropdown-toggle {
+    background-color: rgba(0, 66, 105, 0.15);
+    border-color: rgba(0, 66, 105, 0.20);
+    color: #00395C;
+}
+
+/**
+ * Весь код нужно добавить в bundle
+ */
+.doc-icon {
+    background-image: url(../career.gazpromneft/images/icons/recruitment-schema-2.svg) !important;
+}
+.red-cross-icon {
+    background-image: url(../career.gazpromneft/images/icons/recruitment-schema-1.svg) !important;
+}
+.file-control .doc-icon {
+    min-width: 30px;
+    min-height: 40px;
+}
+.file-control .red-cross-icon {
+    font-size: 1rem;
+}
+.file-control .btn-favourite {
+    padding: 0.438rem;
+    font-size: 12px;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+}
+.link-left-arrow:after {
+    margin-right: 0.5rem;
+}
+.link-left-arrow:hover:after {
+    margin-left: 0.8rem;
+    margin-right: 0.2rem;
+}
+.video-container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+.video-container--16x9 {
+    padding-bottom: 56.25%;
+}
+.video-container embed, .video-container iframe, .video-container object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.career-promo {
+    margin-top:2rem;
+    margin-bottom:2rem;
+}
+@media (min-width:576px) {
+    .internship .caption .features-list li {
+        margin-bottom: 0 !important;
+    }
+}
+
+.career-banner {
+  background-image: href="../career.gazpromneft/images/banner-lg.jpg";
+}
+
+.career-promo .wrapper .promo-banner {
+    background-image: url(/career.gazpromneft/images/banner-lg.jpg);
+}
+.career-banner .wrapper p {
+	font-weight: 300;
+}
+
+@media (max-width:425px) {
+	.career-banner .wrapper h1 {
+		font-size: 32px;
+    		line-height: 40px;
+	}
+}
+@media (min-width:425px) {
+	.career-banner .wrapper p {
+		max-width: 75%
+	}
+}
+
+@media (min-width:1200px) {
+	.internship .caption .features-list {
+	    width: 80%
+	}
+}
+
+/****/
+
+
+.interview-banner {
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../career.gazpromneft/images/interview-banner.jpg);
+	height: 500px;
+}
+.interview-banner:before {
+	content: '';
+	position: absolute;
+	margin: auto;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+	background-size: 100% auto;
+	background-position: 50%;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	-webkit-transition: background-color 0.2s linear;
+	-o-transition: background-color 0.2s linear;
+	transition: background-color 0.2s linear;
+}
+
+
+@media (min-width: 992px) {
+	.interview-banner {
+	    height: 640px;
+	}
+}
+.interview-banner h2 {
+    font-size: 18px;
+    line-height: 25px;
+    max-height: 96px;
+    overflow: hidden;
+}
+@media (min-width: 768px) {
+    .interview-banner h2 {
+        max-height: none;
+        overflow: visible;
+        line-height: 28px;
+    }
+}
+@media (min-width: 992px) {
+    .interview-banner h2 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+.career-banner.interview-banner h1 {
+    font-size: 18px;
+    line-height: 25px;
+    max-height: 96px;
+    overflow: hidden
+}
+
+@media (min-width: 768px) {
+    .interview-banner h1 {
+        max-height: none;
+        overflow: visible;
+        line-height: 28px;
+    }
+    .career-banner.interview-banner h1 {
+	width: 50%;
+    }
+    .career-banner.interview-banner p {
+	width: 50%;
+    }	
+    .interview-banner {
+        background-image: url(../career.gazpromneft/images/interview-banner-lg.jpg);
+    }
+}
+@media (min-width: 992px) {
+    .interview-banner h1{
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+.interview-banner ol.breadcrumb {
+    background-color: transparent !important;
+    color: white !important;
+}
+.interview-banner li.breadcrumb-item, .interview-banner li.breadcrumb-item a{
+    color: white !important;
+}
+
+
+
+/**/
+@media (min-width: 768px) {
+    .stages-second-h1 {
+        font-size: 40px;
+        margin-top: 62px;
+        margin-bottom: 34px;
+    }
+}
+
+@media (min-width: 992px) {
+    .stages-second-h1 {
+        font-size: 48px;
+        margin-top: 0;
+        margin-bottom: 34px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stages-second-h1 {
+        font-size: 26px;
+        margin-top: 34px;
+        margin-bottom: 20px;
+    }
+}
+
+.video-list.video-tips {
+    padding-top: 0px;
+}
+
+.vacancies .vacancies-list > li:last-child {
+    border-bottom: 0 !important;
+}
+
+.career-header .navbar-main .nav-link {
+    white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+	.second-page-banner h1 {
+	    font-size: 30px;
+	    line-height: 38px;
+	}
+}
+
+
+.career-banner {
+    background-image: url(../career.gazpromneft/images/banner.jpg);
+}
+
+
+@media (min-width: 992px)
+{
+	.hot-vacancy {
+	     padding-top: 90px; 
+	     padding-bottom: 90px; 
+	}
+}
+@media (min-width: 992px){
+	.career-banner {
+	    background-image: url(../career.gazpromneft/images/banner-lg.jpg);
+	}
+}
+
+.career-banner.graduates-banner h1 {
+	font-size: 18px;
+	line-height: 24px;
+}
+@media (min-width: 992px){
+	.career-banner.graduates-banner h1  {
+		font-size: 36px;
+		line-height: 54px;
+	}
+	.career-banner.graduates-banner .wrapper {
+		width: 65%;
+	}
+}
+
+.career-events,
+.we-offer {
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+@media (min-width: 768px) {
+	.career-events,
+	.we-offer {
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
+}
+
+@media (min-width: 768px) {
+	.career-events .vacancy h3 {
+		min-height: 84px;
+	}
+}
+
+.cart-project {
+	background: #FFFFFF;
+	box-shadow: 0px 4px 16px rgb(19 46 67 / 17%);
+	border-radius: 8px;
+	overflow: hidden;
+}
+.collapse.partial:not(.show) {
+	display: block;
+	max-height: 120px;
+	overflow: hidden;
+	position: relative;
+}
+.collapse.partial:not(.show):after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgb(255,255,255);
+	background: linear-gradient(0deg, rgba(255,255,255,1) 15%, rgba(255,255,255,0) 100%);
+	height: 60px;
+}
+
+.collapse-button:after {
+    content: "";
+	display: inline-block;
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.51334L5 5.9866L1 10.4866' stroke='%231E88E5'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+	border: 0;
+	height: 12px;
+    width: 8px;
+    margin-left: 0.3em;
+	transform: rotate(270deg);
+}
+.collapse-button.collapsed:after {
+    transform: rotate(90deg);
+}
+.nav-pills .nav-link.nav-link-outline {
+	border: 1px solid #0078D2;
+}
+.nav-pills .nav-link.nav-link-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+@media (min-width: 768px) {
+	.career-direction ul li {
+		display: block !important;
+	}
+	.career-direction ul li a {
+		display: inline;
+	}
+}
+/**/
+.callout {
+	padding-left: calc(1rem + 6px);
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	position: relative;
+}
+.callout:before {
+	content: "";
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 6px;
+	background-color: #e9ecef;
+	border-radius: 0 8px 8px 0;
+	position: absolute;
+}
+.callout.callout-primary:before {
+	background-color: #0078D2;
+}
+
+/**/
+.text-royal-blue {
+	color: #1F0AD9;
+}
+.text-scarlet {
+	color: #F54608;
+}
+.bg-royal-blue {
+	background: #1F0AD9;
+}
+.bg-scarlet {
+	background: #F54608;
+}
+.corp-culture .cart ul {
+	list-style: none;
+}
+.corp-culture .cart ul > li {
+	margin-bottom: 1rem;
+	position: relative;
+}
+.corp-culture .cart ul > li:before {
+	content: "";
+	top: 11px;
+    left: -20px;
+    height: 4px;
+    width: 12px;
+    position: absolute;
+	background-image: url("data:image/svg+xml,%3Csvg width='12' height='4' viewBox='0 0 12 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C12 3.10457 11.1046 4 10 4H2C0.895431 4 0 3.10457 0 2C0 0.895431 0.895431 0 2 0H10C11.1046 0 12 0.895431 12 2Z' fill='url(%23paint0_linear_419_28669)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_419_28669' x1='12' y1='4' x2='5.92736' y2='-6.43391' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF4900'/%3E%3Cstop offset='1' stop-color='%230202F6'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+	background-color: transparent;
+}
+.employee-stories,
+.company-values {
+	padding-bottom: 45px;
+}
+
+/* our-mission */
+
+.our-mission {
+	padding-bottom: 55px;
+	background-size: contain;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-image:  url("data:image/svg+xml,%3Csvg width='1920' height='512' viewBox='0 0 1920 512' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1761.04 41.6609C1763.4 46.6521 1761.27 52.6149 1756.28 54.9792L1686 88.2701V122.321L1876.04 397.088L1906.57 367.733C1908.88 365.508 1912.13 364.529 1915.28 365.102C1918.44 365.675 1921.14 367.731 1922.52 370.627L1976.92 484.376L2076.43 384.871C2080.33 380.965 2086.67 380.965 2090.57 384.871L2112.07 406.371C2115.98 410.276 2115.98 416.608 2112.07 420.513C2108.17 424.418 2101.83 424.418 2097.93 420.513L2083.5 406.084L1981.07 508.513C1978.78 510.808 1975.51 511.846 1972.31 511.298C1969.11 510.75 1966.38 508.684 1964.98 505.756L1910.45 391.746L1881.43 419.65C1879.32 421.682 1876.42 422.684 1873.5 422.392C1870.58 422.099 1867.94 420.541 1866.28 418.13L1667.78 131.13C1666.62 129.459 1666 127.474 1666 125.442V81.9418C1666 78.0773 1668.23 74.5588 1671.72 72.9044L1747.72 36.9044C1752.71 34.5402 1758.67 36.6697 1761.04 41.6609Z' fill='url(%23paint0_linear_419_28622)'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1666 11.0131C1666 2.96137 1674.37 -2.36112 1681.66 1.0483L1757.24 36.3829C1762.24 38.722 1764.4 44.6739 1762.06 49.677C1759.72 54.68 1753.77 56.8396 1748.77 54.5005L1686 25.156V131.617C1686 133.937 1685.27 136.197 1683.91 138.075L1481.83 416.796C1477.69 422.513 1469.3 422.9 1464.65 417.584L1346.4 282.507L1224.53 417.967C1220.79 422.122 1214.53 422.814 1209.98 419.576L1176.1 395.489L1131.26 440.327C1127.05 444.531 1120.27 444.633 1115.94 440.556L993.992 325.7L897.667 403.412C894.982 405.578 891.438 406.359 888.092 405.522L621.333 338.833L294.019 443.316L294.018 443.316C290.712 444.371 287.101 443.804 284.276 441.785L184.541 370.474L-167.098 99.8667C-171.475 96.4984 -172.293 90.2198 -168.924 85.8429C-165.556 81.4661 -159.278 80.6485 -154.901 84.0167L196.46 354.41L292.237 422.89L617.688 319.002C619.635 318.38 621.719 318.313 623.702 318.809L888.596 385.033L987.543 305.207C991.821 301.755 997.99 301.991 1001.99 305.76L1123.29 420.008L1167.33 375.968C1171.13 372.173 1177.11 371.67 1181.48 374.781L1215.03 398.626L1338.31 261.591C1342.72 256.69 1350.42 256.741 1354.77 261.703M1354.77 261.703L1472.26 395.92L1666 128.698V11.0131M1667.71 126.341L1667.71 126.335L1667.71 126.334C1667.71 126.336 1667.71 126.338 1667.71 126.341ZM1479.68 404.394L1479.7 404.411L1479.7 404.412C1479.69 404.406 1479.69 404.4 1479.68 404.394ZM1209.67 404.582C1209.67 404.585 1209.66 404.588 1209.66 404.591L1216.35 410.61L1221.57 403.275C1221.56 403.271 1221.56 403.267 1221.55 403.263L1221.57 403.275L1216.35 410.61L1209.66 404.591L1209.67 404.582Z' fill='url(%23paint1_linear_419_28622)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_419_28622' x1='2096.74' y1='179.703' x2='1713.35' y2='132.264' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF4900'/%3E%3Cstop offset='1' stop-color='%230202F6'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_419_28622' x1='1763' y1='37.4414' x2='314.707' y2='-547.654' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF4900'/%3E%3Cstop offset='1' stop-color='%230202F6'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+}
+
+.our-mission .cart {
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 0px 2px 12px rgba(7, 8, 38, 0.15);
+	border-radius: 4px;
+}
+
+.our-mission-two {
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+
+@media (min-width: 768px) {
+	.our-mission {
+		padding-bottom: 145px;
+	}
+}
+@media (min-width: 992px) {
+	.our-mission {
+		padding-bottom: 190px;
+	}
+	.our-mission .cart p,
+	.our-mission .callout,
+	.our-mission-two .subtitle {
+		font-size: 20px;
+	}
+}
+@media (min-width: 1200px) {
+	.our-mission {
+		padding-bottom: 270px;
+	}
+	.our-mission h1.title {
+		font-size: 48px;
+		line-height: 64px;
+	}
+}
+
+
+/* employee-stories */
+.employee-stories .card {
+	transition: all .2s ease-in-out;
+}
+	
+.employee-stories .card .h3 {
+    line-height: 32px;
+    font-size: 18px;
+}
+.employee-stories .card:hover .btn-light {
+	color: #0078D2;
+}
+
+.employee-stories .card .btn-sm,
+.employee-stories .card .btn-group-sm > .btn {
+    padding: 4px 17px 2px 17px;
+    font-size: 14px;
+    line-height: 24px;
+}
+.employee-stories .card .btn-outline-primary:hover,
+.employee-stories .card .btn-outline-primary:focus,
+.employee-stories .card .btn-outline-primary:not(:disabled):not(.disabled):active,
+.employee-stories .card .btn-outline-primary:not(:disabled):not(.disabled).active{
+    color: #0062AC;
+    border-color: #0078D2;
+}
+
+
+/* corp-culture */
+.corp-culture .title {
+	font-size: 24px;
+	line-height: 32px;
+}
+.corp-culture .cart .title {
+	font-size: 20px;
+	line-height: 28px;
+}
+.corp-culture .cart .subtitle {
+	font-size: 18px;
+	line-height: 26px;
+}
+.corp-culture .cart {
+	font-size: 16px;
+}
+
+
+@media (min-width: 992px) {
+	.corp-culture .title {
+		font-size: 36px;
+		line-height: 54px;
+	}
+	.corp-culture .cart .title {
+		font-size: 32px;
+		line-height: 40px;
+	}
+	.corp-culture .cart .subtitle {
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.corp-culture .cart {
+		font-size: 17px;
+	}
+	.corp-culture .cart ul > li {
+		margin-bottom: 1rem;
+	}
+
+	.our-mission-two,
+	.employee-stories,
+	.company-values {
+		padding-bottom: 90px;
+	}
+	.employee-stories .card .h3 {
+		font-size: 20px;
+		line-height: 28px;
+		font-weight: 400;
+	}
+	.employee-stories .card .btn {
+		opacity: 0;
+		transition: opacity .2s ease-in-out;
+	}
+	.employee-stories .card:hover {
+		background: #0078D2;
+	}
+	.employee-stories .card:hover {
+		color: white;
+	}
+	.employee-stories .card:hover .btn {
+		opacity: 1;
+	}
+}
+
+.career-direction {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important;
+}
+.vacancy-of-day {
+	padding-top: 0 !important;
+	padding-bottom: 45px;
+}
+.career-direction h2,
+.vacancy-of-day h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+@media (min-width: 768px) {
+	.career-direction,
+	.vacancy-of-day {
+		padding-top: 45px !important;
+		padding-bottom: 45px !important;
+	}
+	.career-direction h2,
+	.vacancy-of-day h2 {
+		margin-bottom: 25px;
+	}
+	.sticky-container {
+		position: sticky;
+		top: 50px;
+		bottom: 0;
+	}
+}
+@media (min-width: 992px) {
+	.career-direction,
+	.vacancy-of-day {
+		padding-top: 95px !important;
+		padding-bottom: 95px !important;
+	}
+	.career-direction h2,
+	.vacancy-of-day h2 {
+		margin-bottom: 40px;
+	}
+	.career-banner h1 {
+		width: auto;
+	}
+}
+@media (min-width: 1200px) {
+	.career-direction h2,
+	.vacancy-of-day h2 {
+		margin-bottom: 40px !important;
+	}
+}
+
+#progs-items 
+
+/* helpers */
+
+.font-weight-500 {
+	font-weight: 500 !important;
+}
+
+@media (min-width: 576px) {
+	.w-sm-25 {
+		width: 25%;
+	}
+	.w-sm-50 {
+		width: 50%;
+	}
+	.w-sm-75 {
+		width: 75%;
+	}
+	.w-sm-100 {
+		width: 100%;
+	}
+}
+@media (min-width: 768px) {
+	.w-md-25 {
+		width: 25%;
+	}
+	.w-md-50 {
+		width: 50%;
+	}
+	.w-md-75 {
+		width: 75%;
+	}
+	.w-md-100 {
+		width: 100%;
+	}
+}
+@media (min-width: 992px) {
+	.w-lg-25 {
+		width: 25%;
+	}
+	.w-lg-50 {
+		width: 50%;
+	}
+	.w-lg-75 {
+		width: 75%;
+	}
+	.w-lg-100 {
+		width: 100%;
+	}
+}
+@media (min-width: 1200px) {
+	.w-xl-25 {
+		width: 25%;
+	}
+	.w-xl-50 {
+		width: 50%;
+	}
+	.w-xl-75 {
+		width: 75%;
+	}
+	.w-xl-100 {
+		width: 100%;
+	}
+}
+
+/* helpers.end */
+
+#show-more-employ-stories,
+#show-more-progs1 {
+	margin-left: 15px
+}
